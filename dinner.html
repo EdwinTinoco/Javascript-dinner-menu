@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+
+    <!-- Style fonts Section -->
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <!-- font-family: 'Shadows Into Light', cursive -->
+
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Shadows+Into+Light&display=swap" rel="stylesheet">
+    <!-- font-family: 'Comfortaa', cursive; -->
+
+    <!-- CSS files Section-->
+    <link rel="stylesheet" href="styles/nav-bar.css">
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/content.css">
+    <link rel="stylesheet" href="styles/buttons.css">
+
+    <!-- JavaScript files Section-->
+    <script type="text/javascript" src="./scripts/dinner.js"></script>
+
+</head>
+<body>
+    <!-- Navigation Bar Section -->
+    <div class="navbar-wrapper">
+        <div class="left-column">
+            <div class="logo-image">
+                <img src="images/mi-cabana-mexican-restaurant.jpg" alt="Logo">
+            </div>
+        </div>
+        <div class="right-column">
+            <div class="menu-options">
+                <p>Menu Options</p>
+            </div>    
+            <div class="links-wrapper">
+                <div class="nav-link">
+                    <a href="index.html">Breakfast</a>
+                </div>
+                <div class="nav-link">
+                    <a href="lunch.html">Lunch</a>
+                </div>
+                <div class="nav-link">
+                    <a href="dinner.html">Dinner</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content Wrapper Section -->
+    <div class="content-wrapper">
+        <!-- Dinner Menu Section -->
+        <div class="section-menu-wrapper">
+            <div class="menu-title">
+                <h1>This is the Dinner Menu!</h1>
+            </div>            
+            <div class="menus-wrapper">
+                <div class="entree-menu-wrapper">
+                    <div>
+                        <p>Menu</p>
+                    </div>
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" id="entreeCb1" name="entree1" onclick="firstOpEnMe()">
+                        <label for="entree1">1. Chipotle Chicken Fresh Mex Bowl.......................$32.99</label><br>
+
+                        <input type="checkbox" id="entreeCb2" name="entree2" onclick="secondOpEnMe()">
+                        <label for="entree2">2. Spicy Cheese Shrimp Tacos...................................$30.99</label><br>
+
+                        <input type="checkbox" id="entreeCb3" name="entree3" onclick="thirdOpEnMe()">
+                        <label for="entree3">3. Avocado Chicken Fajitas......................................................$35.99</label><br>
+
+                        <input type="checkbox" id="entreeCb4" name="entree4" onclick="fourthOpEnMe()">
+                        <label for="entree4">4. Mushroom Jack Chicken Fajitas.............................$40.99</label><br>
+
+                        <input type="checkbox" id="entreeCb5" name="entree5" onclick="fifthOpEnMe()">
+                        <label for="entree5">5. Crispy Buffalo Bleu Crispers....................................$42.99</label><br>
+
+                        <input type="checkbox" id="entreeCb6" name="entree6" onclick="sixthOpEnMe()">
+                        <label for="entree6">6. Texas Dry Rub Full Order Ribs...........................$55.99</label><br>
+                    </div>
+
+                    <div class="waitress-comment-wrapper">
+                        <p>The waitrees say this comment: </p>
+                        <div class="waitress-comment">
+                            <p id="entree-comment"></p>  
+                        </div>                                      
+                    </div>
+                </div>
+                <div class="side-menu-wrapper">
+                    <div>
+                        <p>Side Menu</p>
+                    </div>
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" id="sideCb1" name="side1" onclick="firstOpSiMe()">
+                        <label for="side1">1. Asparagus salt/pepper............................$10.99</label><br>
+
+                        <input type="checkbox" id="sideCb2" name="side2" onclick="secondOpSiMe()">
+                        <label for="side2">2. Mashed Potatoes...........................................$11.99</label><br>
+
+                        <input type="checkbox" id="sideCb3" name="side3" onclick="thirdOpSiMe()">
+                        <label for="side3">3. Cesar/Ranch Salad.....................................$9.99</label><br>  
+                        
+                        <input type="checkbox" id="sideCb4" name="side4" onclick="fourthOpSiMe()">
+                        <label for="side4">4. Vegetables............................................................$14.99</label><br>
+
+                        <input type="checkbox" id="sideCb5" name="side5" onclick="fifthOpSiMe()">
+                        <label for="side5">5. Baked Potatoe....................................................$19.99</label><br>  
+                    </div>
+
+                    <div class="waitress-comment-wrapper">
+                        <p>The waitrees say this comment: </p>
+                        <div class="waitress-comment">
+                            <p id="side-comment"></p>  
+                        </div>                                   
+                    </div>
+                </div>
+            </div>
+
+            <div class="total-wrapper">
+                <div class="total-comment">
+                    <p>Total Dinner: </p>
+                </div>
+                <div class="show-total">   
+                    <p id="total">$0</p>
+                </div>                
+            </div>   
+            
+            <div class="buttons-wrapper">
+                <div class="btn-generate-total">
+                    <button type="button" class="btn" onclick="orders()">Total</button>                    
+                </div>
+                <div class="btn-clear">
+                    <button type="button" class="btn" onclick="clearValues()">Clear</button>
+                </div>
+            </div>
+        </div> 
+    </div>     
+</body>
+</html>
